@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Parallax | Catapang</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Luna</a>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#sec">Story</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="img/a.png" id="stars">
+        <img src="img/b.png" id="bigstar">
+        <img src="img/c.png" id="grass">
+        <img src="img/d.png" id="chair">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Story</h2>
+        <p>A friend to all is a friend to none<br>
+            Chase two girls, lose the one<br>
+            When you are young, they assume you know nothin<br>
+            <br><br>
+            But I knew you<br>
+            Playing hide-and-seek and<br>
+            Giving me your weekends,<br>
+            I knew you<br>
+            Your heartbeat on the High Line<br>
+            Once in 20 lifetimes<br>
+            <br><br>
+            And when I felt like I was an old cardigan<br>
+            Under someone's bed<br>
+            You put me on and said I was your favorite<br>
+            <br><br>
+            To kiss in cars and downtown bars<br>
+            Was all we needed<br>
+            You drew stars around my scars<br>
+            But now I'm bleedin'<br>
+            <br><br>
+            'Cause I knew you<br>
+            Steppin' on the last train<br>
+            Marked me like a bloodstain,<br>
+            I knew you<br>
+            Tried to change the ending<br>
+            Peter losing Wendy,<br>
+            I knew you<br>
+            Leavin' like a father<br>
+            Running like water,<br>
+            And when you are young, they assume you know nothing<br>
+            <br><br>
+            But I knew you'd linger like a tattoo kiss<br>
+            I knew you'd haunt all of my what-ifs<br>
+            The smell of smoke would hang around this long<br>
+            'Cause I knew everything when I was young<br>
+            I knew I'd curse you for the longest time<br>
+            <br><br>
+            Chasin' shadows in the grocery line<br>
+            I knew you'd miss me once the thrill expired<br>
+            And you'd be standin' in my front porch light<br>
+            And I knew you'd come back to me<br>
+            You'd come back to me<br>
+            And you'd come back to me<br>
+            And you'd come back<br>
+            <br><br>
+            And when I felt like I was an old cardigan<br>
+            Under someone's bed<br>
+            You put me on and said I was your favorite<br>
+            <br><br>
+            -Cardigan, T.S.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let bigstar = document.getElementById('bigstar');
+        let grass = document.getElementById('grass');
+        let chair = document.getElementById('chair');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            bigstar.style.top = value * 1.05 + 'px';
+            grass.style.left = value * 0 + 'px';
+            chair.style.top = value * 0 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
